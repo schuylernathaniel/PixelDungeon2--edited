@@ -47,15 +47,15 @@ import com.watabou.utils.Random;
 
 public class King extends Mob {
 	
-	private static final int MAX_ARMY_SIZE	= 5;
+	private static final int MAX_ARMY_SIZE	= 2;
 	
 	{
 		name = "King of Dwarves";
 		spriteClass = KingSprite.class;
 		
-		HP = HT = 300;
-		EXP = 40;
-		defenseSkill = 25;
+		HP = HT = 250;
+		EXP = 80;
+		defenseSkill = 23;
 		
 		Undead.count = 0;
 	}
@@ -83,7 +83,7 @@ public class King extends Mob {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 32;
+		return 25;
 	}
 	
 	@Override
@@ -215,6 +215,7 @@ public class King extends Mob {
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
 		RESISTANCES.add( WandOfDisintegration.class );
+		RESISTANCES.add( Paralysis.class);
 	}
 	
 	@Override
@@ -224,7 +225,7 @@ public class King extends Mob {
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
-		IMMUNITIES.add( Paralysis.class );
+		//IMMUNITIES.add( Paralysis.class );
 	}
 	
 	@Override
@@ -240,10 +241,10 @@ public class King extends Mob {
 			name = "undead dwarf";
 			spriteClass = UndeadSprite.class;
 			
-			HP = HT = 28;
-			defenseSkill = 15;
+			HP = HT = 1;
+			defenseSkill = 1;
 			
-			EXP = 0;
+			EXP = 25;
 			
 			state = WANDERING;
 		}
@@ -283,7 +284,7 @@ public class King extends Mob {
 		public void damage( int dmg, Object src ) {
 			super.damage( dmg, src );
 			if (src instanceof ToxicGas) {		
-				((ToxicGas)src).clear( pos );
+				//((ToxicGas)src).clear( pos );
 			}
 		}
 		
@@ -315,8 +316,8 @@ public class King extends Mob {
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 		static {
-			IMMUNITIES.add( Death.class );
-			IMMUNITIES.add( Paralysis.class );
+			//IMMUNITIES.add( Death.class );
+			//IMMUNITIES.add( Paralysis.class );
 		}
 		
 		@Override
