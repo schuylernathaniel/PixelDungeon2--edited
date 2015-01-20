@@ -33,7 +33,7 @@ import com.watabou.utils.Bundle;
 
 public class DewVial extends Item {
 
-	private static final int MAX_VOLUME	= 10;
+	private static final int MAX_VOLUME	= 20;
 	
 	private static final String AC_DRINK	= "DRINK";
 	
@@ -152,7 +152,7 @@ public class DewVial extends Item {
 	
 	public static void autoDrink( Hero hero ) {
 		DewVial vial = hero.belongings.getItem( DewVial.class );
-		if (vial != null && vial.isFull()) {
+		if (vial != null && vial.volume >= 10 {
 			vial.execute( hero );
 			hero.sprite.emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
 			
