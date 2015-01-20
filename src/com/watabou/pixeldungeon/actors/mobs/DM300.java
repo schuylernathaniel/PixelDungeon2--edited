@@ -50,12 +50,12 @@ public class DM300 extends Mob {
 		name = "DM-300";
 		spriteClass = DM300Sprite.class;
 		
-		HP = HT = 200;
-		EXP = 30;
-		defenseSkill = 18;
+		HP = HT = 175;
+		EXP = 55;
+		defenseSkill = 15;
 		
 		loot = new RingOfThorns().random();
-		lootChance = 0.333f;
+		lootChance = 1.0f;
 	}
 	
 	@Override
@@ -85,7 +85,7 @@ public class DM300 extends Mob {
 	public void move( int step ) {
 		super.move( step );
 
-		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && HP < HT) {
+		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && HP < HT && Random.Int(1,10) == 1) {
 			
 			HP += Random.Int( 1, HT - HP );
 			sprite.emitter().burst( ElmoParticle.FACTORY, 5 );
@@ -119,7 +119,7 @@ public class DM300 extends Mob {
 
 		Char ch = Actor.findChar( cell );
 		if (ch != null && ch != this) {
-			Buff.prolong( ch, Paralysis.class, 2 );
+			Buff.prolong( ch, Paralysis.class, 1 );
 		}
 	}
 	
@@ -154,6 +154,7 @@ public class DM300 extends Mob {
 	static {
 		RESISTANCES.add( Death.class );
 		RESISTANCES.add( ScrollOfPsionicBlast.class );
+		RESISTANCES.add( ToxicGas.class);
 	}
 	
 	@Override
@@ -163,7 +164,7 @@ public class DM300 extends Mob {
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
-		IMMUNITIES.add( ToxicGas.class );
+		//IMMUNITIES.add( ToxicGas.class );
 	}
 	
 	@Override
