@@ -137,7 +137,7 @@ public class WellWater extends Blob {
 				water.pos == cell && 
 				water.affect()) {
 				
-				Level.set( cell, Terrain.EMPTY_WELL );
+				//Level.set( cell, Terrain.EMPTY_WELL );
 				GameScene.updateMap( cell );
 				
 				return;
