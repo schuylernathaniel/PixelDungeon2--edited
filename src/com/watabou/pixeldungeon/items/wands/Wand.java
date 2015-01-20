@@ -77,12 +77,12 @@ public abstract class Wand extends KindOfWeapon {
 		WandOfLightning.class,
 		WandOfAmok.class,
 		WandOfTelekinesis.class,
-		WandOfFlock.class,
+		//WandOfFlock.class,
 		WandOfDisintegration.class,
 		WandOfAvalanche.class
 	};
 	private static final String[] woods = 
-		{"holly", "yew", "ebony", "cherry", "teak", "rowan", "willow", "mahogany", "bamboo", "purpleheart", "oak", "birch"};
+		{"holly", "yew", "ebony", "cherry", "teak", "rowan", "willow", "mahogany", /*"bamboo",*/ "purpleheart", "oak", "birch"};
 	private static final Integer[] images = {
 		ItemSpriteSheet.WAND_HOLLY, 
 		ItemSpriteSheet.WAND_YEW, 
@@ -92,7 +92,7 @@ public abstract class Wand extends KindOfWeapon {
 		ItemSpriteSheet.WAND_ROWAN, 
 		ItemSpriteSheet.WAND_WILLOW, 
 		ItemSpriteSheet.WAND_MAHOGANY, 
-		ItemSpriteSheet.WAND_BAMBOO, 
+		//ItemSpriteSheet.WAND_BAMBOO, 
 		ItemSpriteSheet.WAND_PURPLEHEART, 
 		ItemSpriteSheet.WAND_OAK, 
 		ItemSpriteSheet.WAND_BIRCH};
