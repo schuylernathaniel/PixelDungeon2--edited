@@ -45,13 +45,13 @@ public class Goo extends Mob {
 	
 	{
 		name = "Goo";
-		HP = HT = 80;
-		EXP = 10;
-		defenseSkill = 12;
+		HP = HT = 65;
+		EXP = 25;
+		defenseSkill = 10;
 		spriteClass = GooSprite.class;
 		
 		loot = new LloydsBeacon();
-		lootChance = 0.333f;
+		lootChance = 1.00f;
 	}
 	
 	private boolean pumpedUp = false;
