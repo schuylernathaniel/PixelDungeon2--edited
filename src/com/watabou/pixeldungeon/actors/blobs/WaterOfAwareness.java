@@ -72,7 +72,7 @@ public class WaterOfAwareness extends WellWater {
 	
 		GLog.p( TXT_PROCCED );
 		
-		Journal.remove( Feature.WELL_OF_AWARENESS );
+		//Journal.remove( Feature.WELL_OF_AWARENESS );
 		
 		return true;
 	}
