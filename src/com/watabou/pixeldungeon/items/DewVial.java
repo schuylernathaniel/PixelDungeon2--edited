@@ -96,6 +96,8 @@ public class DewVial extends Item {
 					hero.HP += effect;
 					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), volume > 5 ? 2 : 1 );
 					hero.sprite.showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
+					hero.belongings.uncurseEquipped();
+					((Hunger)hero.buff( Hunger.class )).satisfy( Hunger.STARVING );
 				}
 				
 				volume = 0;
