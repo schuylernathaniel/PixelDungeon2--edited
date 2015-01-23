@@ -45,6 +45,8 @@ public class Belongings implements Iterable<Item> {
 	public Armor armor = null;
 	public Ring ring1 = null;
 	public Ring ring2 = null;
+	public Ring ring3 = null;
+	public Ring ring4 = null;
 	
 	public Belongings( Hero owner ) {
 		this.owner = owner;
@@ -60,6 +62,8 @@ public class Belongings implements Iterable<Item> {
 	private static final String ARMOR		= "armor";
 	private static final String RING1		= "ring1";
 	private static final String RING2		= "ring2";
+	private static final String RING3		= "ring3";
+	private static final String RING4		= "ring4";
 	
 	public void storeInBundle( Bundle bundle ) {
 		
@@ -69,6 +73,8 @@ public class Belongings implements Iterable<Item> {
 		bundle.put( ARMOR, armor );
 		bundle.put( RING1, ring1 );
 		bundle.put( RING2, ring2 );
+		bundle.put( RING3, ring3 );
+		bundle.put( RING4, ring4 );
 	}
 	
 	public void restoreFromBundle( Bundle bundle ) {
@@ -91,6 +97,16 @@ public class Belongings implements Iterable<Item> {
 		ring2 = (Ring)bundle.get( RING2 );
 		if (ring2 != null) {
 			ring2.activate( owner );
+		}
+		
+		ring3 = (Ring)bundle.get( RING3 );
+		if (ring3 != null) {
+			ring3.activate( owner );
+		}
+		
+		ring4 = (Ring)bundle.get( RING4 );
+		if (ring4 != null) {
+			ring4.activate( owner );
 		}
 	}
 	
@@ -152,13 +168,21 @@ public class Belongings implements Iterable<Item> {
 			ring2.identify();
 			Badges.validateItemLevelAquired( ring2 );
 		}
+		if (ring3 != null) {
+			ring3.identify();
+			Badges.validateItemLevelAquired( ring3 );
+		}
+		if (ring4 != null) {
+			ring4.identify();
+			Badges.validateItemLevelAquired( ring4 );
+		}
 		for (Item item : backpack) {
 			item.cursedKnown = true;
 		}
 	}
 	
 	public void uncurseEquipped() {
-		ScrollOfRemoveCurse.uncurse( owner, armor, weapon, ring1, ring2 );
+		ScrollOfRemoveCurse.uncurse( owner, armor, weapon, ring1, ring2, ring3, ring4 );
 	}
 	
 	public Item randomUnequipped() {
@@ -195,6 +219,14 @@ public class Belongings implements Iterable<Item> {
 		if (ring2 != null) {
 			ring2.cursed = false;
 			ring2.activate( owner );
+		}
+		if (ring3 != null) {
+			ring3.cursed = false;
+			ring3.activate( owner );
+		}
+		if (ring4 != null) {
+			ring4.cursed = false;
+			ring4.activate( owner );
 		}
 	}
 	
@@ -247,7 +279,7 @@ public class Belongings implements Iterable<Item> {
 		
 		private Iterator<Item> backpackIterator = backpack.iterator();
 		
-		private Item[] equipped = {weapon, armor, ring1, ring2};
+		private Item[] equipped = {weapon, armor, ring1, ring2, ring3, ring4 };
 		private int backpackIndex = equipped.length;
 		
 		@Override
@@ -289,6 +321,10 @@ public class Belongings implements Iterable<Item> {
 				break;
 			case 3:
 				equipped[3] = ring2 = null;
+				break;
+			case 4: equipped[4] = ring3 = null;
+				break;
+			case 5: equipped[5] = ring4 = null;
 				break;
 			default:
 				backpackIterator.remove();
