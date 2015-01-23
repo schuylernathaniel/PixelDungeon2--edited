@@ -131,8 +131,8 @@ public class Hero extends Char {
 	public HeroClass heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	
-	private int attackSkill = 10;
-	private int defenseSkill = 5;
+	private int attackSkill = 15;
+	private int defenseSkill = 10;
 	
 	public boolean ready = false;
 	public HeroAction curAction = null;
@@ -163,9 +163,9 @@ public class Hero extends Char {
 		super();
 		name = "you";
 		
-		HP = HT = 20;
+		HP = HT = 25;
 		STR = STARTING_STR;
-		awareness = 0.1f;
+		awareness = 0.2f;
 		
 		belongings = new Belongings( this );
 		
@@ -250,7 +250,7 @@ public class Hero extends Char {
 		
 		int bonus = 0;
 		for (Buff buff : buffs( RingOfAccuracy.Accuracy.class )) {
-			bonus += ((RingOfAccuracy.Accuracy)buff).level;
+			bonus += ((RingOfAccuracy.Accuracy)buff).level *2;
 		}
 		float accuracy = (bonus == 0) ? 1 : (float)Math.pow( 1.4, bonus );
 		if (rangedWeapon != null && Level.distance( pos, target.pos ) == 1) {
@@ -270,7 +270,7 @@ public class Hero extends Char {
 		
 		int bonus = 0;
 		for (Buff buff : buffs( RingOfEvasion.Evasion.class )) {
-			bonus += ((RingOfEvasion.Evasion)buff).level;
+			bonus += ((RingOfEvasion.Evasion)buff).level *2;
 		}
 		float evasion = bonus == 0 ? 1 : (float)Math.pow( 1.2, bonus );
 		if (paralysed) {
@@ -349,7 +349,7 @@ public class Hero extends Char {
 	public void spend( float time ) {
 		int hasteLevel = 0;
 		for (Buff buff : buffs( RingOfHaste.Haste.class )) {
-			hasteLevel += ((RingOfHaste.Haste)buff).level;
+			hasteLevel += ((RingOfHaste.Haste)buff).level *2;
 		}
 		super.spend( hasteLevel == 0 ? time : (float)(time * Math.pow( 1.1, -hasteLevel )) );
 	};
