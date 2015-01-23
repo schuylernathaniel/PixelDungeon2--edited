@@ -129,49 +129,58 @@ public enum HeroClass {
 	}
 	
 	private static void initWarrior( Hero hero ) {
-		hero.STR = hero.STR + 1;
-		
-		(hero.belongings.weapon = new ShortSword()).identify();
-		new Dart( 8 ).identify().collect();
-		
-		Dungeon.quickslot = Dart.class;
-		
-		new PotionOfStrength().setKnown();
-	}
-	
-	private static void initMage( Hero hero ) {	
-		(hero.belongings.weapon = new Knuckles()).identify();
-		
-		WandOfMagicMissile wand = new WandOfMagicMissile();
-		wand.identify().collect();
-		
-		Dungeon.quickslot = wand;
-		
-		new ScrollOfIdentify().setKnown();
-	}
-	
-	private static void initRogue( Hero hero ) {
-		(hero.belongings.weapon = new Dagger()).identify();
-		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
-		new Dart( 8 ).identify().collect();
-		
-		hero.belongings.ring1.activate( hero );
-		
-		Dungeon.quickslot = Dart.class;
-		
-		new ScrollOfMagicMapping().setKnown();
-	}
-	
-	private static void initHuntress( Hero hero ) {
-		
-		hero.HP = (hero.HT -= 5);
-		
-		(hero.belongings.weapon = new Dagger()).identify();
-		Boomerang boomerang = new Boomerang();
-		boomerang.identify().collect();
-		
-		Dungeon.quickslot = boomerang;
-	}
+        hero.STR = hero.STR + 3;
+
+        (hero.belongings.weapon = new Glaive()).identify();
+        hero.belongings.weapon.upgrade();
+        hero.belongings.weapon.upgrade();
+        hero.belongings.weapon.upgrade();
+        hero.belongings.weapon.upgrade();
+        hero.belongings.weapon.upgrade();
+        hero.belongings.weapon.upgrade();
+        new Dart( 50 ).identify().collect();
+
+        Dungeon.quickslot = Dart.class;
+
+        new PotionOfStrength().setKnown();
+        new ScrollOfUpgrade().setKnown();
+        new ScrollOfIdentify().setKnown();
+    }
+
+    private static void initMage( Hero hero ) {
+        (hero.belongings.weapon = new Knuckles()).identify();
+
+        WandOfMagicMissile wand = new WandOfMagicMissile();
+        wand.identify().collect();
+
+        Dungeon.quickslot = wand;
+
+        new ScrollOfIdentify().setKnown();
+    }
+
+    private static void initRogue( Hero hero ) {
+        (hero.belongings.weapon = new Dagger()).identify();
+        (hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
+        new Dart( 8 ).identify().collect();
+
+        hero.belongings.ring1.activate( hero );
+
+        Dungeon.quickslot = Dart.class;
+
+        new ScrollOfMagicMapping().setKnown();
+    }
+
+    private static void initHuntress( Hero hero ) {
+
+        hero.HP = (hero.HT -= 5);
+
+        (hero.belongings.weapon = new Dagger()).identify();
+        Boomerang boomerang = new Boomerang();
+        boomerang.identify().collect();
+        boomerang.upgrade();
+
+        Dungeon.quickslot = boomerang;
+    }
 	
 	public String title() {
 		return title;
