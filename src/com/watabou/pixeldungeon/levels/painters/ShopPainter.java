@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.*;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
+import com.watabou.pixeldungeon.items.bags.RingBag;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -93,21 +94,22 @@ public class ShopPainter extends Painter {
 		switch (Dungeon.depth) {
 		
 		case 6:
-			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
+			//items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
+			items.add(new RingBag() );
 			items.add( new SeedPouch() );
 			items.add( new Weightstone() );
 			break;
 			
 		case 11:
-			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
+			//items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 			items.add( new MailArmor().identify() );
 			items.add( new ScrollHolder() );
 			items.add( new Weightstone() );
 			break;
 			
 		case 16:
-			items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
+			//items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
 			items.add( new ScaleArmor().identify() );
 			items.add( new WandHolster() );
 			items.add( new Weightstone() );
@@ -116,10 +118,12 @@ public class ShopPainter extends Painter {
 		case 21:
 			switch (Random.Int( 3 )) {
 			case 0:
-				items.add( new Glaive().identify() );
+				//items.add( new Glaive().identify() );
+				items.add( new PlateArmor().identify() );
 				break;
 			case 1:
-				items.add( new WarHammer().identify() );
+				//items.add( new WarHammer().identify() );
+				items.add( new PlateArmor().identify() );
 				break;
 			case 2:
 				items.add( new PlateArmor().identify() );
