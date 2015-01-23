@@ -132,12 +132,7 @@ public enum HeroClass {
         hero.STR = hero.STR + 3;
 
         (hero.belongings.weapon = new Glaive()).identify();
-        hero.belongings.weapon.upgrade();
-        hero.belongings.weapon.upgrade();
-        hero.belongings.weapon.upgrade();
-        hero.belongings.weapon.upgrade();
-        hero.belongings.weapon.upgrade();
-        hero.belongings.weapon.upgrade();
+        hero.belongings.weapon.upgrade(6);
         new Dart( 50 ).identify().collect();
 
         Dungeon.quickslot = Dart.class;
