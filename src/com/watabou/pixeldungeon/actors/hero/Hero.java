@@ -806,6 +806,11 @@ public class Hero extends Char {
 					damage += Buff.affect( this, Combo.class ).hit( enemy, damage );
 				}
 				break;
+			case GLADIATOR-WARLOCK:
+				if (wep instanceof MeleeWeapon) {
+					damage += Buff.affect( this, Combo.class ).hit( enemy, damage );
+				}
+				break;
 			case BATTLEMAGE:
 				if (wep instanceof Wand) {
 					Wand wand = (Wand)wep;
@@ -1046,6 +1051,16 @@ public class Hero extends Char {
 			
 			((Hunger)buff( Hunger.class )).satisfy( 10 );
 		}
+		if (subClass == HeroSubClass.GLADIATOR-WARLOCK) {
+			
+			int value = Math.min( HT - HP, 1 + (Dungeon.depth - 1) / 5 );
+			if (value > 0) {
+				HP += value;
+				sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+			}
+			
+			((Hunger)buff( Hunger.class )).satisfy( 10 );
+		}
 	}
 	
 	public int maxExp() {
@@ -1267,7 +1282,7 @@ public class Hero extends Char {
 		int positive = 0;
 		int negative = 0;
 		for (Buff buff : buffs( RingOfDetection.Detection.class )) {
-			int bonus = ((RingOfDetection.Detection)buff).level;
+			int bonus = ((RingOfDetection.Detection)buff).level *2;
 			if (bonus > positive) {
 				positive = bonus;
 			} else if (bonus < 0) {
