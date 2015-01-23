@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
+import com.watabou.pixeldungeon.items.bags.RingBag;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -114,6 +115,7 @@ public class WndBag extends WndTabbed {
 			stuff.backpack, 
 			stuff.getItem( SeedPouch.class ), 
 			stuff.getItem( ScrollHolder.class ),
+			stuff.getItem( RingBag.class ),
 			stuff.getItem( WandHolster.class )};
 		
 		for (Bag b : bags) {
@@ -156,6 +158,8 @@ public class WndBag extends WndTabbed {
 		placeItem( stuff.armor != null ? stuff.armor : new Placeholder( ItemSpriteSheet.ARMOR ) );
 		placeItem( stuff.ring1 != null ? stuff.ring1 : new Placeholder( ItemSpriteSheet.RING ) );
 		placeItem( stuff.ring2 != null ? stuff.ring2 : new Placeholder( ItemSpriteSheet.RING ) );
+		placeItem( stuff.ring3 != null ? stuff.ring3 : new Placeholder( ItemSpriteSheet.RING ) );
+		placeItem( stuff.ring4 != null ? stuff.ring4 : new Placeholder( ItemSpriteSheet.RING ) );
 		
 		// Unequipped items
 		for (Item item : container.items) {
@@ -259,6 +263,8 @@ public class WndBag extends WndTabbed {
 				return Icons.get( Icons.SCROLL_HOLDER );
 			} else if (bag instanceof WandHolster) {
 				return Icons.get( Icons.WAND_HOLSTER );
+			} else if (bag instanceof RingBag) {
+				return Icons.get( Icons.SCROLL_HOLDER );
 			} else {
 				return Icons.get( Icons.BACKPACK );
 			}
