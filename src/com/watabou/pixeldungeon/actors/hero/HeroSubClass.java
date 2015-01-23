@@ -30,6 +30,12 @@ public enum HeroSubClass {
 		"When severely wounded, the _Berserker_ enters a state of wild fury " +
 		"significantly increasing his damage output." ),
 	
+	GLADIATOR-WARLOCK( "gladiator-warlock",
+        	"A successful attack with a melee weapon allows the _Gladiator-Warlock_ to start a combo, " +
+        	"in which every next successful hit inflicts more damage." +
+       		"After killing an enemy the _Gladiator-Warlock_ consumes its soul. \" +\n"+
+       		"\t\t\"It heals his wounds and satisfies his hunger.\"" ),
+       		
 	WARLOCK( "warlock", 
 		"After killing an enemy the _Warlock_ consumes its soul. " +
 		"It heals his wounds and satisfies his hunger." ),
