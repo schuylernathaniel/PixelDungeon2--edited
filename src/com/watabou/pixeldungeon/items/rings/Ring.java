@@ -112,17 +112,21 @@ public class Ring extends EquipableItem {
 	@Override
 	public boolean doEquip( Hero hero ) {
 		
-		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
+		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null&& hero.belongings.ring3 != null && hero.belongings.ring4 != null) {
 			
-			GLog.w( "you can only wear 2 rings at a time" );
+			GLog.w( "you can only wear 4 rings at a time" );
 			return false;
 			
 		} else {
 			
 			if (hero.belongings.ring1 == null) {
 				hero.belongings.ring1 = this;
-			} else {
+			} else if(hero.belongings.ring2 == null) {
 				hero.belongings.ring2 = this;
+			} else if(hero.belongings.ring3 == null) {
+				hero.belongings.ring3 = this;
+			} else {
+				hero.belongings.ring4 = this;
 			}
 			
 			detach( hero.belongings.backpack );
@@ -153,8 +157,12 @@ public class Ring extends EquipableItem {
 			
 			if (hero.belongings.ring1 == this) {
 				hero.belongings.ring1 = null;
-			} else {
+			} else if (hero.belongings.ring2 == this) {
 				hero.belongings.ring2 = null;
+			} else if (hero.belongings.ring3 == this) {
+				hero.belongings.ring3 = null;
+			} else {
+				hero.belongings.ring4 = null;
 			}
 			
 			hero.remove( buff );
@@ -171,7 +179,7 @@ public class Ring extends EquipableItem {
 	
 	@Override
 	public boolean isEquipped( Hero hero ) {
-		return hero.belongings.ring1 == this || hero.belongings.ring2 == this;
+		return hero.belongings.ring1 == this || hero.belongings.ring2 == this || hero.belongings.ring3 == this || hero.belongings.ring4 == this;
 	}
 	
 	@Override
