@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 
-import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.noosa.Game;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -60,9 +60,9 @@ import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndResurrect;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.PathFinder;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Bundle;
+import com.watabou.pixeldungeon.utils.PathFinder;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Dungeon {
 	
