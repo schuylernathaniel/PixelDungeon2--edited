@@ -50,7 +50,7 @@ import com.watabou.pixeldungeon.sprites.RottingFistSprite;
 import com.watabou.pixeldungeon.sprites.YogSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Yog extends Mob {
 	
@@ -166,13 +166,6 @@ public class Yog extends Mob {
 	static {
 		
 		IMMUNITIES.add( Death.class );
-		IMMUNITIES.add( Terror.class );
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Charm.class );
-		IMMUNITIES.add( Sleep.class );
-		IMMUNITIES.add( Burning.class );
-		IMMUNITIES.add( ToxicGas.class );
-		IMMUNITIES.add( ScrollOfPsionicBlast.class );
 	}
 	
 	@Override
@@ -188,7 +181,7 @@ public class Yog extends Mob {
 			name = "rotting fist";
 			spriteClass = RottingFistSprite.class;
 			
-			HP = HT = 300;
+			HP = HT = 1;
 			defenseSkill = 25;
 			
 			EXP = 0;
