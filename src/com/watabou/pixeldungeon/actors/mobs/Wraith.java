@@ -29,8 +29,8 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.WraithSprite;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Wraith extends Mob {
 
@@ -43,7 +43,7 @@ public class Wraith extends Mob {
 		spriteClass = WraithSprite.class;
 		
 		HP = HT = 1;
-		EXP = 0;
+		EXP = 500;
 		
 		flying = true;
 	}
