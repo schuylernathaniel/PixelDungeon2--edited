@@ -28,8 +28,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MirrorSprite;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class MirrorImage extends NPC {
 	
