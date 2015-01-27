@@ -40,11 +40,11 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.TenguSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Tengu extends Mob {
 
-	private static final int JUMP_DELAY = 5;
+	private static final int JUMP_DELAY = 15;
 	
 	{
 		name = "Tengu";
