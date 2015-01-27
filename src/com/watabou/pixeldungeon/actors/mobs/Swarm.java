@@ -32,8 +32,8 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.SwarmSprite;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Swarm extends Mob {
 
@@ -49,7 +49,7 @@ public class Swarm extends Mob {
 		flying = true;
 	}
 	
-	private static final float SPLIT_DELAY	= 1f;
+	private static final float SPLIT_DELAY	= 3f;
 	
 	int generation	= 0;
 	
@@ -124,7 +124,7 @@ public class Swarm extends Mob {
 			Buff.affect( clone, Burning.class ).reignite( clone );
 		}
 		if (buff( Poison.class ) != null) {
-			Buff.affect( clone, Poison.class ).set( 2 );
+			Buff.affect( clone, Poison.class ).set( 10 );
 		}
 		return clone;
 	}
