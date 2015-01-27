@@ -26,8 +26,8 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class WellWater extends Blob {
 
