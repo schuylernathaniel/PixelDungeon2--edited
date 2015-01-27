@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public class Poison extends Buff implements Hero.Doom {
 	
