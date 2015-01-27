@@ -85,12 +85,12 @@ public class Monk extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		
-		if (Random.Int( 6 ) == 0 && enemy == Dungeon.hero) {
+		if (Random.Int( 50 ) == 0 && enemy == Dungeon.hero) {
 			
 			Hero hero = Dungeon.hero;
 			KindOfWeapon weapon = hero.belongings.weapon;
 			
-			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
+			if (weapon != null && !(weapon instanceof Glaive) && !weapon.cursed) {
 				hero.belongings.weapon = null;
 				Dungeon.level.drop( weapon, hero.pos ).sprite.drop();
 				GLog.w( TXT_DISARM, name, weapon.name() );
@@ -109,8 +109,6 @@ public class Monk extends Mob {
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
 	static {
-		IMMUNITIES.add( Amok.class );
-		IMMUNITIES.add( Terror.class );
 	}
 	
 	@Override
