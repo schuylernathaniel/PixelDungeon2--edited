@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public enum HeroSubClass {
 
