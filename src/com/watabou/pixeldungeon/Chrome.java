@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.watabou.pixeldungeon.noosa.NinePatch;
+import com.watabou.noosa.NinePatch;
 
 public class Chrome {
 
