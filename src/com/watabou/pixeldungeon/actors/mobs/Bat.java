@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.sprites.BatSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Bat extends Mob {
 
