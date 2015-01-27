@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.SkeletonSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Skeleton extends Mob {
 
@@ -82,7 +82,7 @@ public class Skeleton extends Mob {
 	
 	@Override
 	protected void dropLoot() {
-		if (Random.Int( 5 ) == 0) {
+		if (Random.Int( 1 ) == 0) {
 			Item loot = Generator.random( Generator.Category.WEAPON );
 			for (int i=0; i < 2; i++) {
 				Item l = Generator.random( Generator.Category.WEAPON );
