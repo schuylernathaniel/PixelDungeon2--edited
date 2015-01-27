@@ -34,7 +34,7 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.SuccubusSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Succubus extends Mob {
 	
@@ -54,7 +54,7 @@ public class Succubus extends Mob {
 		maxLvl = 25;
 		
 		loot = new ScrollOfLullaby();
-		lootChance = 0.05f;
+		lootChance = 0.75f;
 	}
 	
 	@Override
@@ -65,11 +65,11 @@ public class Succubus extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		
-		if (Random.Int( 3 ) == 0) {
-			Buff.affect( enemy, Charm.class, Charm.durationFactor( enemy ) * Random.IntRange( 2, 5 ) );
-			enemy.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
-			Sample.INSTANCE.play( Assets.SND_CHARMS );
-		}
+	//	if (Random.Int( 3 ) == 0) {
+	//		Buff.affect( enemy, Charm.class, Charm.durationFactor( enemy ) * Random.IntRange( 2, 5 ) );
+	//		enemy.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
+	//		Sample.INSTANCE.play( Assets.SND_CHARMS );
+	//	}
 		
 		return damage;
 	}
