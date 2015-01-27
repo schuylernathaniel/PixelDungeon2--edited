@@ -28,8 +28,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ThiefSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Thief extends Mob {
 
@@ -49,7 +49,7 @@ public class Thief extends Mob {
 		maxLvl = 10;
 		
 		loot = RingOfHaggler.class;
-		lootChance = 0.01f;
+		lootChance = 0.9f;
 		
 		FLEEING = new Fleeing();
 	}
@@ -75,7 +75,7 @@ public class Thief extends Mob {
 	
 	@Override
 	protected float attackDelay() {
-		return 0.5f;
+		return 5f;
 	}
 	
 	@Override
