@@ -32,12 +32,12 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ShamanSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Callback;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Shaman extends Mob implements Callback {
 
-	private static final float TIME_TO_ZAP	= 2f;
+	private static final float TIME_TO_ZAP	= 5f;
 	
 	private static final String TXT_LIGHTNING_KILLED = "%s's lightning bolt killed you...";
 	
@@ -48,11 +48,11 @@ public class Shaman extends Mob implements Callback {
 		HP = HT = 18;
 		defenseSkill = 8;
 		
-		EXP = 6;
+		EXP = 15;
 		maxLvl = 14;
 		
 		loot = Generator.Category.SCROLL;
-		lootChance = 0.33f;
+		lootChance = 1.0f;
 	}
 	
 	@Override
@@ -92,7 +92,7 @@ public class Shaman extends Mob implements Callback {
 			spend( TIME_TO_ZAP );
 			
 			if (hit( this, enemy, true )) {
-				int dmg = Random.Int( 2, 12 );
+				int dmg = Random.Int( 2, 5 );
 				if (Level.water[enemy.pos] && !enemy.flying) {
 					dmg *= 1.5f;
 				}
