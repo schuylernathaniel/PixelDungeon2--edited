@@ -32,12 +32,12 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.WarlockSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Callback;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Warlock extends Mob implements Callback {
 	
-	private static final float TIME_TO_ZAP	= 1f;
+	private static final float TIME_TO_ZAP	= 5f;
 	
 	private static final String TXT_SHADOWBOLT_KILLED = "%s's shadow bolt killed you...";
 	
@@ -52,7 +52,7 @@ public class Warlock extends Mob implements Callback {
 		maxLvl = 21;
 		
 		loot = Generator.Category.POTION;
-		lootChance = 0.83f;
+		lootChance = 1.0f;
 	}
 	
 	@Override
