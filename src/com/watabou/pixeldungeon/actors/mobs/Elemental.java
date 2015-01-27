@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.pixeldungeon.sprites.ElementalSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Elemental extends Mob {
 
