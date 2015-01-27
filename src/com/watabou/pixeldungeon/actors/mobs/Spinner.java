@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.SpinnerSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Spinner extends Mob {
 	
@@ -44,7 +44,7 @@ public class Spinner extends Mob {
 		maxLvl = 16;
 		
 		loot = new MysteryMeat();
-		lootChance = 0.125f;
+		lootChance = 0.5f;
 		
 		FLEEING = new Fleeing();
 	}
@@ -78,8 +78,8 @@ public class Spinner extends Mob {
 	
 	@Override
 	public int attackProc( Char enemy, int damage ) {
-		if (Random.Int( 2 ) == 0) {
-			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
+		if (Random.Int( 15 ) == 0) {
+			Buff.affect( enemy, Poison.class ).set( Random.Int( 0, 2 ) * Poison.durationFactor( enemy ) );
 			state = FLEEING;
 		}
 		
