@@ -18,7 +18,7 @@
 package com.watabou.noosa;
 
 import com.watabou.input.Keys;
-import com.watabou.utils.Signal;
+import com.watabou.pixeldungeon.utils.Signal;
 
 public class Scene extends Group {
 	

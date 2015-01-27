@@ -20,9 +20,9 @@ package com.watabou.noosa;
 import java.util.ArrayList;
 
 import com.watabou.glwrap.Matrix;
-import com.watabou.utils.Point;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Point;
+import com.watabou.pixeldungeon.utils.PointF;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Camera extends Gizmo {
 

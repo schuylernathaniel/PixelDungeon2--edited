@@ -28,8 +28,8 @@ import com.watabou.input.Keys;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.utils.BitmapCache;
-import com.watabou.utils.SystemTime;
+import com.watabou.pixeldungeon.utils.BitmapCache;
+import com.watabou.pixeldungeon.utils.SystemTime;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

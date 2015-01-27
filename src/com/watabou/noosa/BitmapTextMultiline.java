@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import com.watabou.glwrap.Quad;
-import com.watabou.utils.PointF;
+import com.watabou.pixeldungeon.utils.PointF;
 
 import android.graphics.RectF;
 

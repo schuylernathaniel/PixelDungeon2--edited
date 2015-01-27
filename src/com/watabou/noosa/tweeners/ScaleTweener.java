@@ -18,7 +18,7 @@
 package com.watabou.noosa.tweeners;
 
 import com.watabou.noosa.Visual;
-import com.watabou.utils.PointF;
+import com.watabou.pixeldungeon.utils.PointF;
 
 public class ScaleTweener extends Tweener {
 
