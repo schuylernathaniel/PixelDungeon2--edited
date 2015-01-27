@@ -36,7 +36,7 @@ public class Bones {
 	private static final String ITEM	= "item";
 	
 	private static int depth = -1;
-	private static Item item;
+	private static Item item = null;
 	
 	public static void leave() {
 		

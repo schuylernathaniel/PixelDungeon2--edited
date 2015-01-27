@@ -17,7 +17,7 @@
  */
 package com.watabou.pixeldungeon;
 
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public class Statistics {
 	

@@ -19,8 +19,8 @@ package com.watabou.pixeldungeon;
 
 import java.util.ArrayList;
 
-import com.watabou.utils.Bundlable;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundlable;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public class Journal {
 

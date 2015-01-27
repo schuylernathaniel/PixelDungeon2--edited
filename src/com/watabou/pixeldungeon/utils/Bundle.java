@@ -33,6 +33,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.Item;
+
 public class Bundle {
 
 	private static final String CLASS_NAME = "__className";
@@ -204,9 +207,25 @@ public class Bundle {
 		}
 	}
 	
+	public void put( String key, Hero hero ) {
+		try {
+			data.put( key, hero );
+		} catch (JSONException e) {
+
+		}
+	}
+	
 	public void put( String key, Bundle bundle ) {
 		try {
 			data.put( key, bundle.data );
+		} catch (JSONException e) {
+
+		}
+	}
+	
+	public void put( String key, Item item ) {
+		try {
+			data.put( key, item );
 		} catch (JSONException e) {
 
 		}
