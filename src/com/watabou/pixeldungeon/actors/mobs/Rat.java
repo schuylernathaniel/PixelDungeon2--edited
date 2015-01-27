@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.sprites.RatSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Rat extends Mob {
 
