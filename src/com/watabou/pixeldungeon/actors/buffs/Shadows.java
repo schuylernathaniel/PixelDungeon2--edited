@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public class Shadows extends Invisibility {
 	
