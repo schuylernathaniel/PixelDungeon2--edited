@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public enum HeroClass {
 
