@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.sprites.GolemSprite;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Golem extends Mob {
 	
