@@ -24,7 +24,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.utils.SparseArray;
+import com.watabou.pixeldungeon.utils.SparseArray;
 
 public class FloatingText extends BitmapText {
 
