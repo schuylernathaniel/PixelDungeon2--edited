@@ -22,7 +22,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.utils.PointF;
+import com.watabou.pixeldungeon.utils.PointF;
 
 public class BadgeBanner extends Image {
 
