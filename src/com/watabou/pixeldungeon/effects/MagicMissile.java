@@ -28,10 +28,10 @@ import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.effects.particles.WoolParticle;
-import com.watabou.utils.Callback;
-import com.watabou.utils.ColorMath;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Callback;
+import com.watabou.pixeldungeon.utils.ColorMath;
+import com.watabou.pixeldungeon.utils.PointF;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class MagicMissile extends Emitter {
 
