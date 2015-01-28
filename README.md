@@ -8,6 +8,3 @@ https://play.google.com/store/apps/details?id=com.watabou.pixeldungeon
 
 Official web-site of original game: 
 http://pixeldungeon.watabou.ru/
-
-Watabou's blog: 
-http://pixeldungeon.tumblr.com/
