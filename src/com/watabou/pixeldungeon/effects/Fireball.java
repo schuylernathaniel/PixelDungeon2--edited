@@ -30,8 +30,8 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.utils.ColorMath;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.ColorMath;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Fireball extends Component {
 
