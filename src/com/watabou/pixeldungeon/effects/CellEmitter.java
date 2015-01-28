@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.effects;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.utils.PointF;
+import com.watabou.pixeldungeon.utils.PointF;
 
 public class CellEmitter {
 
