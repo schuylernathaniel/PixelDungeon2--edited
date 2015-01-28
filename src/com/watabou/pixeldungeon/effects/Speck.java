@@ -26,8 +26,8 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.PointF;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Speck extends Image {
 
