@@ -22,7 +22,7 @@ import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-import com.watabou.utils.PointF;
+import com.watabou.pixeldungeon.utils.PointF;
 
 public class Pushing extends Actor {
 
