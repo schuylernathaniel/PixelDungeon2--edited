@@ -20,8 +20,8 @@ package com.watabou.pixeldungeon.effects.particles;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.noosa.particles.Emitter.Factory;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.PointF;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class EnergyParticle extends PixelParticle {
 	
