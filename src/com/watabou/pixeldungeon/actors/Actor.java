@@ -26,8 +26,8 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.Bundlable;
-import com.watabou.utils.Bundle;
+import com.watabou.pixeldungeon.utils.Bundlable;
+import com.watabou.pixeldungeon.utils.Bundle;
 
 public abstract class Actor implements Bundlable {
 	
