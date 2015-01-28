@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Potential extends Glyph {
 
