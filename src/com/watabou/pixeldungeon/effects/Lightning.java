@@ -28,8 +28,8 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.utils.Callback;
+import com.watabou.pixeldungeon.utils.Random;
 
 public class Lightning extends Group {
 
